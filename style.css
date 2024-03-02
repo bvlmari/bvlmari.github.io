@@ -1,0 +1,23 @@
+@font-face { 
+    font-family: mincho-medium; 
+    src: url('font/ShipporiMinchoB1-Medium.ttf') format('truetype'); 
+} 
+
+@font-face { 
+    font-family: mincho-regular; 
+    src: url('font/ShipporiMinchoB1-Regular.ttf') format('truetype'); 
+} 
+
+h1, p, form {
+    text-align: center;
+}
+
+h1 {
+    font-family: mincho-medium;
+}
+
+body {
+    font-family: mincho-regular;
+    background-color: azure;
+    margin: auto;
+}
