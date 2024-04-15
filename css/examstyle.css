@@ -31,13 +31,19 @@ h1,h2,h3{
 .titulo span{
     font-size: 2rem;
 }
+#inicio, #blog, #portafolio, #contacto {
+    padding-top: 70px; /* Adjust this value to match the height of your navbar */
+    margin-top: -70px; /* This should be the same as the padding-top, but negative */
+}
 .navbar-bg{
-    background-color: #0097A7;
+    background-color: #ababab;
     border-radius: 10px 10px 10px 10px;
     -moz-border-radius: 10px 10px 10px 10px;
     -webkit-border-radius: 10px 10px 10px 10px;
     border: 0px solid #000000;
-
+    position: sticky;
+    top: 0;
+    z-index: 100; /* This ensures the navbar stays on top of other elements */
 }
 .navbar-principal{
     padding: 1rem;
@@ -91,9 +97,10 @@ h1,h2,h3{
 .contenedor{
     width: 120rem;
     margin: 0 auto 0 auto;
+    
 }
 .boton{
-    background-color: #0097A7;
+    background-color: #ababab;
     color: #ffffff;
     padding: 1rem 3rem;
     font-size: 2rem;
@@ -104,6 +111,21 @@ h1,h2,h3{
     width: 90%;
     text-align: center;
 }
+.inline {
+    width: unset;
+    margin: 0 0.5em 0 0;
+    vertical-align: middle;
+    display: inline;
+}
+label {
+    display: block;
+    margin: 0 0.5rem 0;
+}
+fieldset {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 .sombra{
     -webkit-box-shadow: -1px 1px 7px 8px rgba(0,0,0,0.51);
     -moz-box-shadow: -1px 1px 7px 8px rgba(0,0,0,0.51);
@@ -112,24 +134,24 @@ h1,h2,h3{
     padding: 2rem;
     border-radius: 1rem;
 }
-.servicio{
+.blogEntry{
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-.servicio h3{
-    color: #0097a7;
+.blogEntry h3{
+    color: #ababab;
     font-size: normal;
 }
-.servicio p{
+.blogEntry p{
     line-height: 2;
     text-align: center;
 }
-.servicio .iconos{
+.blogEntry .iconos{
     line-height: 2;
     height: 15rem;
     width: 15rem;
-    background-color: #ffc107;
+    background-color: #ababab;
     border-radius: 50%;
     display: flex;
     justify-content: space-evenly;
@@ -141,15 +163,29 @@ h1,h2,h3{
     }
 }
 @media (min-width: 768px){
-    .servicios {
-        display: grid;
-        grid-template-columns: 33% 33% 33%;
-        column-gap: 1rem;
-    }
-}
-@media (min-width: 768px){
     .navbar-principal{
         flex-direction: row;
         justify-content: space-between;
+    }
+}
+/* For screens smaller than 1200px */
+@media (max-width: 1200px) {
+    .contenedor {
+        width: auto;
+    }
+    .sombra {
+        box-shadow: -1px 1px 5px 6px rgba(0,0,0,0.41);
+        padding: 1rem;
+    }
+}
+
+/* For screens smaller than 800px */
+@media (max-width: 800px) {
+    .contenedor {
+        width: auto;
+    }
+    .sombra {
+        box-shadow: -1px 1px 3px 4px rgba(0,0,0,0.31);
+        padding: 0.5rem;
     }
 }
