@@ -1,23 +1,31 @@
-function updateClock() {
-    var now = new Date();
-    var hours = now.getHours();
-    var minutes = now.getMinutes();
-    var seconds = now.getSeconds();
-  
-    hours = hours < 10 ? '0' + hours : hours;
-    minutes = minutes < 10 ? '0' + minutes : minutes;
-    seconds = seconds < 10 ? '0' + seconds : seconds;
-  
-    document.getElementById('clock').textContent =
-      hours + ':' + minutes + ':' + seconds;
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Draggable Window</title>
+<style>
+  .window {
+    width: 200px;
+    height: 150px;
+    background-color: lightgray;
+    border: 2px solid darkgray;
+    position: absolute;
+    cursor: move;
   }
-  
-  // Update the clock every second
-  setInterval(updateClock, 1000);
-  
-  // Initial call to display the clock immediately
-  updateClock();
+</style>
+</head>
+<body>
 
+<div class="window" id="myWindow">
+  <div class="titlebar">Drag me!</div>
+  <div class="content">
+    <!-- Window content goes here -->
+  </div>
+</div>
+
+<script>
+// Get the window element
 var windowElement = document.getElementById('myWindow');
 
 // Variables to hold the position of the mouse and the position of the window when dragging starts
@@ -56,3 +64,7 @@ function handleMouseUp() {
 
 // Attach the mousedown event listener to the titlebar
 windowElement.querySelector('.titlebar').addEventListener('mousedown', handleMouseDown);
+</script>
+
+</body>
+</html>

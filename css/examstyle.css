@@ -5,6 +5,7 @@
 html {
     font-size: 62.5%;
     font-family: 'Roboto', sans-serif;
+    -webkit-font-smoothing: subpixel-antialiased;
 }
 *,*::before,*::after{
     box-sizing: inherit;
@@ -175,6 +176,14 @@ fieldset {
     font-family: speedy;
     font-size: 32px;
     color: white;
+}
+.window {
+    width: 200px;
+    height: 150px;
+    background-color: lightgray;
+    border: 2px solid darkgray;
+    position: absolute;
+    cursor: move;
 }
 @media (min-width: 768px){
     .boton{
