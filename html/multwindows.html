@@ -1,25 +1,34 @@
-function updateClock() {
-    var now = new Date();
-    var hours = now.getHours();
-    var minutes = now.getMinutes();
-    var seconds = now.getSeconds();
-  
-    hours = hours < 10 ? '0' + hours : hours;
-    minutes = minutes < 10 ? '0' + minutes : minutes;
-    seconds = seconds < 10 ? '0' + seconds : seconds;
-  
-    document.getElementById('clock').textContent =
-      hours + ':' + minutes + ':' + seconds;
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Multiple Draggable Windows</title>
+<style>
+  .window {
+    position: absolute;
+    width: 200px;
+    height: 150px;
+    background-color: lightblue;
+    border: 1px solid black;
+    resize: both;
+    overflow: hidden;
   }
-  
-  // Update the clock every second
-  setInterval(updateClock, 1000);
-  
-  // Initial call to display the clock immediately
-  updateClock();
+  .titlebar {
+    width: 100%;
+    height: 20px;
+    background-color: gray;
+    cursor: move;
+  }
+</style>
+</head>
+<body>
 
+<!-- Windows will be dynamically created with JavaScript -->
+
+<script>
 // Function to create a window element with a random position
-function createWindow(title, contentHTML) {
+function createWindow() {
   var windowElement = document.createElement('div');
   windowElement.className = 'window';
   windowElement.style.left = Math.random() * (window.innerWidth - 200) + 'px'; // Random left position
@@ -27,28 +36,18 @@ function createWindow(title, contentHTML) {
 
   var titlebar = document.createElement('div');
   titlebar.className = 'titlebar';
-  titlebar.textContent = title;
+  titlebar.textContent = 'Window';
   windowElement.appendChild(titlebar);
-
-  var content = document.createElement('div');
-  content.className = 'content';
-  content.innerHTML = contentHTML;
-  windowElement.appendChild(content);
 
   return windowElement;
 }
 
-// Add multiple windows to the body with different content
-var windowsData = [
-  { title: 'Abril 2', content: 'Fui al apple park <br><img src="../media/applepark.jpg" id="imagen">' },
-  { title: 'Mayo 1', content: 'fui a comer' },
-  { title: 'Enero 2', content: 'sali de fiesta' }
-];
-
-windowsData.forEach(function(windowData) {
-  var windowElement = createWindow(windowData.title, windowData.content);
+// Add multiple windows to the body
+var numberOfWindows = 3; // Change this value to adjust the number of windows
+for (var i = 0; i < numberOfWindows; i++) {
+  var windowElement = createWindow();
   document.body.appendChild(windowElement);
-});
+}
 
 // Variables to hold the position of the mouse and the position of the window when dragging starts
 var offsetX, offsetY, startX, startY, currentWindow;
@@ -86,23 +85,7 @@ var windowElements = document.querySelectorAll('.window');
 windowElements.forEach(function(windowElement) {
   windowElement.querySelector('.titlebar').addEventListener('mousedown', handleMouseDown);
 });
+</script>
 
-function updateWindowPositions() {
-  windowElements.forEach(function(windowElement) {
-    var left = parseFloat(windowElement.style.left);
-    var top = parseFloat(windowElement.style.top);
-
-    // Ensure windows stay within the visible area of the viewport
-    left = Math.min(left, window.innerWidth - windowElement.offsetWidth);
-    top = Math.min(top, window.innerHeight - windowElement.offsetHeight);
-
-    windowElement.style.left = left + 'px';
-    windowElement.style.top = top + 'px';
-  });
-}
-
-// Attach resize event listener to update window positions
-window.addEventListener('resize', updateWindowPositions);
-
-// Update window positions initially
-updateWindowPositions();
+</body>
+</html>
