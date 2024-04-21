@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Water Droplets Effect</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        .wall {
+            width: 100%;
+            height: 100vh; /* Adjust as needed */
+            background: #ccc; /* Replace with your wall color or image */
+            position: relative;
+        }
+
+        .droplet {
+            position: absolute;
+            width: 2px; /* Adjust width of droplets */
+            height: 10px; /* Adjust height of droplets */
+            background-color: rgba(0, 0, 255, 0.5); /* Adjust opacity and color of droplets */
+            animation: falling 2s linear infinite; /* Animation effect */
+        }
+
+        @keyframes falling {
+            0% { top: -10px; opacity: 0; }
+            50% { opacity: 0.7; }
+            100% { top: 100%; opacity: 0; }
+        }
+    </style>
+</head>
+<body>
+    <div class="wall">
+        <!-- Content of your wall -->
+    </div>
+    <div class="droplets-container">
+        <!-- Water droplets will be dynamically added here -->
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const dropletsContainer = document.querySelector('.droplets-container');
+            const maxDroplets = 20; // Adjust maximum number of droplets
+            const interval = 500; // Adjust interval between droplets (in milliseconds)
+            let dropletCount = 0;
+
+            function createDroplet() {
+                if (dropletCount < maxDroplets) {
+                    const droplet = document.createElement('div');
+                    droplet.classList.add('droplet');
+                    droplet.style.left = Math.random() * 100 + '%';
+                    dropletsContainer.appendChild(droplet);
+                    dropletCount++;
+                }
+            }
+
+            setInterval(createDroplet, interval);
+        });
+    </script>
+</body>
+</html>
