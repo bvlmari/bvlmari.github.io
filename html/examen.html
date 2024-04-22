@@ -10,140 +10,156 @@
 		<link href="../css/examenstyle.css" rel="stylesheet"/>
     </head>
     <body>
-        <header>
-            <div class="navbar">
-                <ul href=""><strong>Mariano P.</strong></ul>
-                <button>Menus icon cuando responsivo</button>
-                <ul href="">About me</ul>
-                <ul href="">Blog</ul>
-            </div>
+        <header id="home">
+            <nav class="navbar">
+                <ul><a href="#home"><strong>Mariano Piña</strong></a></ul>
+                <!-- <button>Menus icon cuando responsivo</button> -->
+                <ul><a href="#inicio">Acerca</a></ul>
+                <ul><a href="#blog">Blog</a></ul>
+            </nav>
         </header>
         <main>
-            <div class="leftColumn">side card sticky, es la columna que me gusta que se queda si le das para abajo
-                <div>card wrap, basicamente la card que se queda con la info y los enlaces</div>
+            <div class="leftColumn">
+                <span class="card">
+                    <div class="circle">
+                        <img src="../media/appleMe2.jpg" id="cardImg">
+                    </div>
+                    <h3>Mariano Perez Piña</h3>
+                    <a href="https://www.github.com/bvlmari"><img src="../icon/githubIcon.svg" id="icon"></a>
+                    <a href="https://www.linkedin.com/in/mariano-pp/"><img src="../icon/linkedinIcon.svg" id="icon"></a>
+                </span>
             </div>
-            <div class="middleColumn">pagina, basciamente lo del medio y lo principal
-                <article>Parece q solo se limita a el texto o el contenido
+            <div class="middleColumn">
+                <article>
                     <h1>
-                        <a>Header link del about me</a>
+                        <a href="#inicio" id="inicio"></a>
                         Acerca de mi
                     </h1>
-                    <hr>linea divisora gris
+                    <hr>
                     <h3>
-                        <a>Header link de la bienvenida</a>
-                        Bienvenido soy <strong>Mariano</strong>,
+                        <a href="#introduccion"></a>
+                        Hola soy <strong>Mariano</strong>,
                     </h3>
-                    <p>Soy una persona intelectualmente curiosa</p>
+                    <p>Soy un estudiante joven nuevo al campo de la tecnologia, intelectualmente curioso con la esperanza de aprender lo mas que pueda mientras estoy aqui.</p>
                     <h3>
-                        <a>Header link de Tambien soy un...</a>
-                        Tambien soy un...,
+                        <a href="#introduccion2"></a>
+                        Tambien soy
                     </h3>
                     <ul>
                         <li>Estudiante</li>
                         <li>Desarrollador</li>
-                        <li>Etc...</li>
+                        <li>Gamer</li>
+                        <li>Fan del arte</li>
                     </ul>
                     <p>
-                        <img>Imagen de mis proyectos o relacionado a eso de estudiante, dev o etc..
+                        <img src="../media/arte.jpg" id="arte">
                     </p>
-                    <p>Este elemento p solo lo usa de espacio en blanco, asi que puede ser padding?</p>
-                    <hr>Otra linea divisora gris
+                    <hr>
                     <p>
                         <strong>Especialidad</strong>
-                        ":"
+                        :
                         <br>
-                        Me especializo en gatits y perritos
+                        Actualmente mi especialidad es el desarrollo de software, pero tambien tengo fuerte interes en la inteligencia artificial y el desarrollo de videojuegos.
                     </p>
                     <p>
                         <strong>Educacion</strong>
-                        ":"
+                        :
                         <br>
-                        "2024 fecha Maestria en IA, "
-                        <a href="enlace de universidad">TEC MTY</a>
-                        ", Tijuana, Mexico"
-                        <br>
-                        "2024 fecha ing en compu, "
-                        <a href="enlace de uabc">UABC</a>
-                        ", Tijuana, Mexico"
+                        2025 Ingeniero en Software y Tecnologias Emergentes [2025],
+                        <a href="https://www.uabc.mx/">UABC</a>
+                        , Tijuana, Mexico
                         <br>
                         <strong>Promedio</strong>
-                        ": 89"
+                        : 89
                         <br>
                         <strong>Toefl</strong>
-                        ": 106 (29/26/23/28)"
-                        <strong>GRE</strong>
-                        ": 320 (160/160/4.0)"
+                        : 112 (29/28/27/28)
                     </p>
-                    <hr>Otra linea divisora gris
+                    <hr>
                     <p>
                         <strong>Telefono (whatsapp)</strong>
-                        ": +52 664 425 1849"
+                        : +52 664 425 1849
                         <br>
                         <strong>E-mail</strong>
-                        ":"
+                        :
                         <a href="mailto:bvlmari2@gmail.com">bvlmari2@gmail.com</a>
-                        <strong>Otra red social</strong>
-                        ": user"
+                        <!-- <strong>Instagram</strong>
+                        : bvlmari -->
                         <br>
                         <strong>Direccion</strong>
-                        ": Apoco puso su direcion, Tijuana, BC, Mexico"
-                    </p>
-                    <p>
-                        <strong>Identidad</strong>
-                        ": Tiene cosas de visa pero bien pudiera poner idiomas o algo asi"
+                        : Localizado en Tijuana, Baja California, Mexico
                     </p>
                     <hr>Otra linea divisora gris
                     <p>
-                        <strong>Skillsets</strong>
-                        ":"
+                        <strong>Habilidades</strong>
+                        :
                         <br>
-                        "Languages: Spanish (Native), English (Fluent), French (Basic)"
+                        Lenguajes: Español (Nativo), Ingles (Fluente), Frances (Basico)
                         <br>
-                        "Values: Proactive, Teamwork, Leadership, Problem-solving"
+                        Valores: Proactivo, Trabajo en equipo, Liderazgo, Solucion de problemas
                         <br>
-                        "Coding languages: Python, Java, C++, C, R, SQL, HTML, CSS, JS, React, Node, Git, Docker, AWS, Azure, GCP"
+                        Herramientas: Python, Java, SQL, HTML, CSS, JS, React, Node, Git, Docker, AWS, Linux
                         <br>
-                        "Software: Office, Photoshop, Illustrator, Premiere, After Effects, Blender, Unity, Unreal Engine"
+                        Software: Office, Photoshop, Illustrator, Premiere, After Effects, Blender
                     </p>
+                    <hr>
                     <p>
-                        <strong>Core Courses</strong>
-                        ":"
-                        <br>
-                        "Data Structures, Algorithms, Machine Learning, Deep Learning, Computer Vision, Natural Language Processing, Data Mining, Big Data, Cloud Computing, Web Development, Mobile Development, Game Development, Software Engineering, Database Management, Operating Systems, Computer Networks, Cybersecurity, Ethical Hacking, Blockchain, Quantum Computing"
+                        Si quieres saber mas de mi, puedes leer la pagina correspondiente o referirte a mi 
+                        <a href="../media/CV_html.pdf">Resume/CV</a>
+                        .
                     </p>
-                    <p v-html="'&nbsp;'">&nbsp;</p>
-                    <hr>Otra linea divisora gris
-                    <p>
-                        <strong>Quick Jump</strong>
-                        ":"
-                        <a href="/works">portafolio</a>
-                        <a href="/awards">awards</a>
-                        <a href="/certificates">certificates</a>
-                        <a target="_blank" rel="noopener" href="https://blog.csdn.net/Marianostarter">blog</a>
-                        <br>
-                        "Si quieres saber mas de mi, puedes leer la pagina correspondiente o referirte a mi "
-                        <a href="/attaches/CV.pdf">Resume/CV</a>
-                        "."
-                    </p>
-                    <p>Ultimo update: 2024/19/04</p>
+                    <hr>
+                    <h1>
+                        <a href="#Blog" id="blog"></a>
+                        Blog
+                    </h1>
+                    <section class="blogEntry">
+                        <h3>
+                            15 de Abril, 2024
+                        </h3>
+                        <img src="../media/tareaclase.jpg" id="imagen">
+                        <p>El dia de hoy en clase me enseñaron a dividir las paginas de html en secciones para despues aplicarle el css individualmente a cada contenedor, hace muy sencilla la organizacion!</p>
+                    </section>
+                    <section class="blogEntry">
+                        <h3>25 de Marzo, 2024</h3>
+                        <img src="../media/applepark.jpg" id="imagen">
+                        <p>Estas vacaciones de semana santa fui a San Francisco, y en el camino hicimos una parada en las oficinas de apple, el Apple Park, aunque no te dejan entrar el ambiente y la vista estan muy bien, llenan de determinacion a un ingeniero sin duda.</p>
+                    </section>
+                    <section class="blogEntry">
+                        <h3>4 de Marzo, 2024</h3>
+                        <img src="../media/socialnetwork.jpeg" id="imagen">
+                        <p>El dia de hoy vi la pelicula de The Social Network, da una perspectiva muy interesante sobre uno de los CEOs de tech modernos, aunque se enfoca mucho en su vida personal da una perspectiva sobre el emprendimiento.</p>    
+                    </section>
+                    <section class="blogEntry">
+                        <h3>20 de Enero, 2024</h3>
+                        <img src="../media/elonbook.jpeg" id="imagen">
+                        <p>El dia de hoy termine de leer la biografia de Elon Musk, resulto ser una persona muy interesante a pesar de lo que se dice sobre el en redes.</p>   
+                    </section>
+                    <br>
+                    <strong>Salto rapido</strong>
+                    :
+                    <a href="#home">Home</a>
+                    <a href="#inicio">Inicio</a>
+                    <a href="#blog">Blog</a>
+                    <p>Ultima actualizacion: 21/04/2024</p>
                 </article>
             </div>
             <div class="rightColumn">
-                <div class="cube">
+                <span class="cube">
                     <div class="face front"><p></p></div>
                     <div class="face back"></div>
                     <div class="face top"></div>
                     <div class="face bottom"></div>
                     <div class="face left"></div>
                     <div class="face right"></div>
-                    <div class="him"><img src="../media/him.png"></div>
-                </div>
+                    <div class="him"><img src="../media/him.png" id="yo"></div>
+                </span>
             </div>
         </main>
-        <div class="interactions">Nav wrap o el contenedor del icono de menu y de return up
+        <!-- <div class="interactions">Nav wrap o el contenedor del icono de menu y de return up
             <div>Icono de menu</div>
             <div>Icono de return up</div>
-        </div>
+        </div> -->
         <hr>
         <footer>
             <p>Todos los derechos reservados. &copy Mariano Perez Pina</p>
