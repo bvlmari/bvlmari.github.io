@@ -76,6 +76,7 @@ p{
     transition: opacity 0.2s ease-in-out;
     width: auto;
     padding: 10px;
+    text-align: center;
 }
 .circle{
     width: 200px;
