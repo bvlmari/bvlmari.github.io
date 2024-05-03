@@ -1,28 +1,170 @@
 <!DOCTYPE html>
 <html>
-
-	<head>
-		<title> Mariano P. </title>
+    <head>
+        <title> Mariano P. </title>
 		<meta charset="UTF-8">
-		<meta name="description" content="This field contains info about my page, just nothing to talk about right now though. ">
-		<meta name="author" content="MPP">
+		<meta name="description" content="About me Mariano P.">
+		<meta name="author" content="Mariano P.">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="icon" href="icon/trueicon.ico">
-		<link href="css/style.css" rel="stylesheet"/>
-	</head>
-	<body>
-		<h1>Mariano P.</h1>
-            <div>
-				<p ><b>Portafolio Emprendimiento de negocios de software</b></p>
-				<a href="html/portafolio.html"><p ><img src="icon/porticon.jpg" alt="Portafolio de evidencias Emprendimiento de negocios de software" height="100" width="100"></p></a>
-				<p ><b>Examen 1 - Aplicaciones web</b></p>
-				<a href="html/examen.html"><p ><img src="icon/examicon.svg" alt="Examen 1 - Aplicaciones web" height="100" width="100"></p></a>
-				<a href="html/cat.html"><p>(>ᴗ•)</p></a>
-		    	<a href="html/game.html"><p>Im bored :p</p></a>
+		<link href="css/examenstyle.css" rel="stylesheet"/>
+    </head>
+    <body>
+        <header id="home">
+            <nav class="navbar">
+                <ul><a href="#home"><strong>Mariano Piña</strong></a></ul>
+                <!-- <button>Menus icon cuando responsivo</button> -->
+                <ul><a href="#inicio">Acerca</a></ul>
+                <ul><a href="#blog">Blog</a></ul>
+                <ul><a href="html/portafolio.html">Portafolio</a></ul>
+            </nav>
+        </header>
+        <main>
+            <div class="leftColumn">
+                <span class="card">
+                    <div class="circle">
+                        <img src="media/appleMe2.jpg" id="cardImg">
+                    </div>
+                    <h3>Mariano Perez Piña</h3>
+                    <a href="https://www.github.com/bvlmari"><img src="icon/githubIcon.svg" id="icon"></a>
+                    <a href="https://www.linkedin.com/in/mariano-pp/"><img src="icon/linkedinIcon.svg" id="icon"></a>
+                    <a href="mailto:bvlmari2@gmail.com"><img src="icon/mailIcon.svg" id="icon"></a>
+                </span>
             </div>
-			<form action="malito:gatito@gmail.com" method="get" enctype="text/plain">
-				<input type="submit" value="Contact">
-			</form>
-	</body>
+            <div class="middleColumn">
+                <article>
+                    <h1>
+                        <a href="#inicio" id="inicio"></a>
+                        Acerca de mi
+                    </h1>
+                    <hr>
+                    <h3>
+                        <a href="#introduccion"></a>
+                        Hola soy <strong>Mariano</strong>,
+                    </h3>
+                    <p>Soy un estudiante joven nuevo al campo de la tecnologia, intelectualmente curioso con la esperanza de aprender lo mas que pueda mientras estoy aqui.</p>
+                    <h3>
+                        <a href="#introduccion2"></a>
+                        Tambien soy
+                    </h3>
+                    <ul>
+                        <li>Estudiante</li>
+                        <li>Desarrollador</li>
+                        <li>Gamer</li>
+                        <li>Fan del arte</li>
+                    </ul>
+                    <p>
+                        <img src="media/arte.jpg" id="arte">
+                    </p>
+                    <hr>
+                    <p>
+                        <strong>Especialidad</strong>
+                        :
+                        <br>
+                        Actualmente mi especialidad es el desarrollo de software, pero tambien tengo fuerte interes en la inteligencia artificial y el desarrollo de videojuegos.
+                    </p>
+                    <p>
+                        <strong>Educacion</strong>
+                        :
+                        <br>
+                        2025 Ingeniero en Software y Tecnologias Emergentes [2025],
+                        <a href="https://www.uabc.mx/">UABC</a>
+                        , Tijuana, Mexico
+                        <br>
+                        <strong>Promedio</strong>
+                        : 89
+                        <br>
+                        <strong>Toefl</strong>
+                        : 112 (29/28/27/28)
+                    </p>
+                    <hr>
+                    <p>
+                        <strong>Telefono (whatsapp)</strong>
+                        : +52 664 425 1849
+                        <br>
+                        <strong>E-mail</strong>
+                        :
+                        <a href="mailto:bvlmari2@gmail.com">bvlmari2@gmail.com</a>
+                        <!-- <strong>Instagram</strong>
+                        : bvlmari -->
+                        <br>
+                        <strong>Direccion</strong>
+                        : Localizado en Tijuana, Baja California, Mexico
+                    </p>
+                    <hr>
+                    <p>
+                        <strong>Habilidades</strong>
+                        :
+                        <br>
+                        Lenguajes: Español (Nativo), Ingles (Fluente), Frances (Basico)
+                        <br>
+                        Valores: Proactivo, Trabajo en equipo, Liderazgo, Solucion de problemas
+                        <br>
+                        Herramientas: Python, Java, SQL, HTML, CSS, JS, React, Node, Git, Docker, AWS, Linux
+                        <br>
+                        Software: Office, Photoshop, Illustrator, Premiere, After Effects, Blender
+                    </p>
+                    <hr>
+                    <p>
+                        Si quieres saber mas de mi, puedes leer la pagina correspondiente o referirte a mi 
+                        <a href="media/CV_html.pdf">Resume/CV</a>
+                        .
+                    </p>
+                    <hr>
+                    <h1>
+                        <a href="#Blog" id="blog"></a>
+                        Blog
+                    </h1>
+                    <section class="blogEntry">
+                        <h3>
+                            15 de Abril, 2024
+                        </h3>
+                        <img src="media/tareaclase.jpg" id="imagen">
+                        <p>El dia de hoy en clase me enseñaron a dividir las paginas de html en secciones para despues aplicarle el css individualmente a cada contenedor, hace muy sencilla la organizacion!</p>
+                    </section>
+                    <section class="blogEntry">
+                        <h3>25 de Marzo, 2024</h3>
+                        <img src="media/applepark.jpg" id="imagen">
+                        <p>Estas vacaciones de semana santa fui a San Francisco, y en el camino hicimos una parada en las oficinas de apple, el Apple Park, aunque no te dejan entrar el ambiente y la vista estan muy bien, llenan de determinacion a un ingeniero sin duda.</p>
+                    </section>
+                    <section class="blogEntry">
+                        <h3>4 de Marzo, 2024</h3>
+                        <img src="media/socialnetwork.jpeg" id="imagen">
+                        <p>El dia de hoy vi la pelicula de The Social Network, da una perspectiva muy interesante sobre uno de los CEOs de tech modernos, aunque se enfoca mucho en su vida personal da una perspectiva sobre el emprendimiento.</p>    
+                    </section>
+                    <section class="blogEntry">
+                        <h3>20 de Enero, 2024</h3>
+                        <img src="media/elonbook.jpeg" id="imagen">
+                        <p>El dia de hoy termine de leer la biografia de Elon Musk, resulto ser una persona muy interesante a pesar de lo que se dice sobre el en redes.</p>   
+                    </section>
+                    <br>
+                    <strong>Salto rapido</strong>
+                    :
+                    <a href="#home">Home</a>
+                    <a href="#inicio">Inicio</a>
+                    <a href="#blog">Blog</a>
+                    <p>Ultima actualizacion: 21/04/2024</p>
+                </article>
+            </div>
+            <div class="rightColumn">
+                <span class="cube">
+                    <div class="face front"><p></p></div>
+                    <div class="face back"></div>
+                    <div class="face top"></div>
+                    <div class="face bottom"></div>
+                    <div class="face left"></div>
+                    <div class="face right"></div>
+                    <div class="him"><img src="media/him.png" id="yo"></div>
+                </span>
+            </div>
+        </main>
+        <!-- <div class="interactions">Nav wrap o el contenedor del icono de menu y de return up
+            <div>Icono de menu</div>
+            <div>Icono de return up</div>
+        </div> -->
+        <hr>
+        <footer>
+            <p>Todos los derechos reservados. &copy Mariano Perez Pina</p>
+        </footer>    
+    </body>
 </html>
-
