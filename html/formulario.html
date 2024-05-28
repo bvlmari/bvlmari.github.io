@@ -6,33 +6,72 @@
         <title>Formulario</title>
     </head>
     <body>
-        <header>
-            <h1>Registro</h1>
-        </header>
-        <div id="formulario">
+        <div class="formulario">
+            <header>
+                <h1>Registro</h1>
+            </header>
             <form action="basura.html" method="post">
                 <div class="elemento">
                     <h2>CORREO ELECTRONICO</h2>
                     <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required>
+                    <input type="email" id="email" name="email" placeholder="Tu Email">
+                    <p>El correo debera ser de la persona a la cual se le enviara el registro y factura en caso de requerida</p>
                 </div>
                 <div class="elemento">
                     <h2>TIPO DE INSCRIPCION</h2>
+                    <label for="tipo">Escoge un tipo de inscripcion:</label>
+                    <select id="tipo" name="tipo">
+                        <option value="seleccione">Seleccione</option>
+                        <option value="mensual">Estudiante</option>
+                        <option value="anual">No estudiante</option>
+                    </select>
                 </div>
                 <div class="elemento">
                     <h2>PAPER ID</h2>
+                    <label for="paper">ID_1 (Numbers only):</label>
+                    <input type="text" id="paper" name="paper" placeholder="paperID_1">
+                    <p>Escribir solo numeros, sin etiquetas ni Paper_ID.</p>
+                    <br>
+                    <span id="constancia">
+                        <h5>Adjuntar Constancia de estudios:</h5>
+                        <p>Nota:(Para inscripcion de estudiante deberas enivar constancia o credencial vigente emitidida por tu institucion):</p>
+                        <label for="archivo"></label>
+                        <input type="file" id="archivo" name="archivo">
+                        <p>* El archivo debera medir menos de 3MB, y debera tener diferente nombre.</p>
+                    </span>
                 </div>
                 <div class="elemento">
                     <h2>RECIBO DE PAGO</h2>
+                    <label for="recibo">Numero de folio:</label>
+                    <input type="text" id="recibo" name="recibo">
+                    <p>Nota: Solo se aceptan pagos via transferencia electronica</p>
+                    <br><br><br>
+                    <label for="ficha">Ficha de deposito:</label>
+                    <input type="file" id="ficha" name="ficha">
+                    <p>* El archivo debera medir menos de 3MB, y debera tener diferente nombre.</p>
                 </div>
-                <div class="elemento">
-                    <h3>Facturacion</h3>
+                <div class="elemento facturacion">
+                    <h3>FACTURACION</h3>
+                    <select id="factura" name="tipo">
+                        <option value="seleccione"></option>
+                        <option value="mensual">Si</option>
+                        <option value="anual">No</option>
+                    </select>
+                    <br>
+                    <span>
+                    </span>
+                    <br>
+                    <span>
+                        <br>
+                        <button type="submit" id="registrar">REGISTRAR</button>
+                        <br>
+                    </span>
+                    
                 </div>                   
-                <button type="submit">REGISTRAR</button>
             </form>
+            <footer>
+                <br>
+            </footer>
         </div>
-        <footer>
-            <br>
-        </footer>
     </body>
 </html>
