@@ -23,7 +23,7 @@
                     <select id="tipo" name="tipo">
                         <option value="seleccione">Seleccione</option>
                         <option value="mensual">Estudiante</option>
-                        <option value="anual">No estudiante</option>
+                        <option value="anual">Investigador</option>
                     </select>
                 </div>
                 <div class="elemento">
@@ -54,11 +54,33 @@
                     <h3>FACTURACION</h3>
                     <select id="factura" name="tipo">
                         <option value="seleccione"></option>
-                        <option value="mensual">Si</option>
-                        <option value="anual">No</option>
+                        <option value="si">Si</option>
+                        <option value="no">No</option>
                     </select>
                     <br>
-                    <span>
+                    <span id="siFacturo">
+                        <p>Nota: En caso de requerir factura, favor de llenar la informacion solicitada en este apartado y agregar el archivo del RFC generado por el SAT.</p>
+                        <p>**NO SE EMITIRA FACTURA SI FALTAN DATOS O NO SE HAYA ADJUNTADO EL ARCHIVO DE RFC.
+                        <br>
+                        <label for="rfc">RFC:</label>
+                        <input type="text" id="rfc" name="rfc">
+                        <label for="archivoRFC">Adjuntar archivo del RFC:</label>
+                        <input type="file" id="archivoRFC" name="archivoRFC">
+                        <p>* El archivo debera medir menos de 3MB, y debera tener diferente nombre.</p>
+                        <br><br>
+                        <label for="nombre">Nombre o Razon social:</label>
+                        <input type="text" id="nombre" name="nombre">
+                        <label for="domicilio">Domicilio: Calle, numero exterior, interior:</label>
+                        <input type="text" id="domicilio" name="domicilio">
+                        <label for="colonia">Colonia:</label>
+                        <input type="text" id="colonia" name="colonia">
+                        <label for="cp">Codigo Postal (Numbers only):</label>
+                        <input type="text" id="cp" name="cp">
+                        <label for="ciudad">Ciudad:</label>
+                        <input type="text" id="ciudad" name="ciudad">
+                        <label for="estado">Estado:</label>
+                        <input type="text" id="estado" name="estado">
+                        <br><br><br>
                     </span>
                     <br>
                     <span>

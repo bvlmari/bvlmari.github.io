@@ -43,6 +43,12 @@ form{
 #factura{
     display: block;
 }
+#siFacturo{
+    display: none;
+    br{
+        display: block;
+    }
+}
 span{
     padding: 1rem;
     border: 2px solid #e0e0e0;
