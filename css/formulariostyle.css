@@ -65,3 +65,17 @@ footer{
     text-align: center;
     margin-top: 2rem;
 }
+.error{
+    background-color: red;
+    text-align: center;
+    padding: 1rem;
+    color: var(--blanco);
+    text-transform: uppercase;
+}
+.exito{
+    background-color: green;
+    text-align: center;
+    padding: 1rem;
+    color: var(--blanco);
+    text-transform: uppercase;
+}
