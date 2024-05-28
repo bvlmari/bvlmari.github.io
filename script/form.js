@@ -101,7 +101,7 @@ formulario.addEventListener('submit', function(evento) {
     evento.preventDefault();
 
     const {email, tipo, paper, archivo, recibo, ficha, factura, rfc, archivoRFC, nombre, domicilio, colonia, cp, ciudad, estado} = datos;
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+\.com$/;
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
     // Validate email format
     if (!emailRegex.test(email)) {
