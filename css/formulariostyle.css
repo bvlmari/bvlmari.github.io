@@ -1,0 +1,21 @@
+body{
+    background-color: #f2f2f2;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+header{
+    height: fit-content;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+.elemento{
+    margin-top: 50px;
+    width: 400px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
