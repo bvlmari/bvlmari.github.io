@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="icon" href="../../icon/trueicon.ico">
+		<link href="../../css/indexstyle.css" rel="stylesheet"/>
+        <style>
+            table {
+              width: 100%;
+              border-collapse: collapse;
+            }
+            th, td {
+              padding: 10px;
+              border: 1px solid #ddd;
+              text-align: left;
+            }
+            th {
+              background-color: #f4f4f4;
+            }
+          </style>
+    </head>
+    <body>
+        <header id="home">
+            <nav class="navbar">
+                <ul><a href="#home"><strong>Mariano Piña</strong></a></ul>
+                <!-- <button>Menus icon cuando responsivo</button> -->
+                <ul><a href="../mediaPlayer/index.html">Media player</a></ul>
+                <ul class="personal"><a href="../watchlist/index.html">Watchlist</a></ul>
+            </nav>
+        </header>
+        <table>
+            <thead>
+              <tr>
+                <th>Task</th>
+                <th>Completed</th>
+                <th>Completion Date</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>bakemonogatari</td>
+                <td><input type="checkbox" onclick="markDate(this)"></td>
+                <td class="date-cell"></td>
+              </tr>
+              <tr>
+                <td>Zone of enders</td>
+                <td><input type="checkbox" onclick="markDate(this)"></td>
+                <td class="date-cell"></td>
+              </tr>
+              <tr>
+                <td>Gakkougurashi</td>
+                <td><input type="checkbox" onclick="markDate(this)"></td>
+                <td class="date-cell"></td>
+              </tr>
+              <tr>
+                <td>One punch man</td>
+                <td><input type="checkbox" onclick="markDate(this)"></td>
+                <td class="date-cell"></td>
+              </tr>
+              <tr>
+                <td>Death note</td>
+                <td><input type="checkbox" onclick="markDate(this)"></td>
+                <td class="date-cell"></td>
+              </tr>
+              <tr>
+                <td>Hells paradise</td>
+                <td><input type="checkbox" onclick="markDate(this)"></td>
+                <td class="date-cell"></td>
+              </tr>
+              <tr>
+                <td>Danmachi</td>
+                <td><input type="checkbox" onclick="markDate(this)"></td>
+                <td class="date-cell"></td>
+              </tr>
+              <tr>
+                <td>kami no tou</td>
+                <td><input type="checkbox" onclick="markDate(this)"></td>
+                <td class="date-cell"></td>
+              </tr>
+              <tr>
+                <td>Pseudo harem</td>
+                <td><input type="checkbox" onclick="markDate(this)"></td>
+                <td class="date-cell"></td>
+              </tr>
+              <tr>
+                <td>Full dive rpg</td>
+                <td><input type="checkbox" onclick="markDate(this)"></td>
+                <td class="date-cell"></td>
+              </tr>
+              <tr>
+                <td>Hokkaido gals are super adorable</td>
+                <td><input type="checkbox" onclick="markDate(this)"></td>
+                <td class="date-cell"></td>
+              </tr>
+              <tr>
+                <td>Intergalatic species reviewers</td>
+                <td><input type="checkbox" onclick="markDate(this)"></td>
+                <td class="date-cell"></td>
+              </tr>
+              <tr>
+                <td>Buccigiri</td>
+                <td><input type="checkbox" onclick="markDate(this)"></td>
+                <td class="date-cell"></td>
+              </tr>
+              <tr>
+                <td>Your eternity</td>
+                <td><input type="checkbox" onclick="markDate(this)"></td>
+                <td class="date-cell"></td>
+              </tr>
+              <tr>
+                <td>Gundam blood orphan</td>
+                <td><input type="checkbox" onclick="markDate(this)"></td>
+                <td class="date-cell"></td>
+              </tr>
+              <tr>
+                <td>Scary godmother film</td>
+                <td><input type="checkbox" onclick="markDate(this)"></td>
+                <td class="date-cell"></td>
+              </tr>
+              <tr>
+                <td>tsuki ga michibiku isekai douchuu</td>
+                <td><input type="checkbox" onclick="markDate(this)"></td>
+                <td class="date-cell"></td>
+              </tr>
+              <tr>
+                <td>Uncle isekaid</td>
+                <td><input type="checkbox" onclick="markDate(this)"></td>
+                <td class="date-cell"></td>
+              </tr>
+            </tbody>
+          </table>
+          
+          <script>
+          function markDate(checkbox) {
+            const dateCell = checkbox.parentElement.nextElementSibling;
+            if (checkbox.checked) {
+              const currentDate = new Date().toLocaleDateString();
+              dateCell.textContent = currentDate;
+            } else {
+              dateCell.textContent = ''; // Clears the date if unchecked
+            }
+          }
+          </script>
+    </body>
+</html>

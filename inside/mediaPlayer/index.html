@@ -1,0 +1,153 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="../../icon/trueicon.ico">
+<link href="../../css/indexstyle.css" rel="stylesheet"/>
+<title>Simple Music Player</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+  }
+  #music-player {
+    text-align: center;
+    max-width: 300px;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  #song-title {
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-size: 1.2em;
+  }
+  .controls {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+  }
+  .controls button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+  }
+  .controls button:hover {
+    background-color: #0056b3;
+  }
+  #playlist {
+    max-width: 300px;
+    list-style: none;
+    padding: 0;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  #playlist li {
+    padding: 10px;
+    cursor: pointer;
+    border-bottom: 1px solid #ddd;
+  }
+  #playlist li:last-child {
+    border-bottom: none;
+  }
+  #playlist li.active {
+    background-color: #007bff;
+    color: white;
+  }
+</style>
+</head>
+<body>
+
+    <header id="home">
+        <nav class="navbar">
+            <ul><a href="#home"><strong>Mariano Piña</strong></a></ul>
+            <!-- <button>Menus icon cuando responsivo</button> -->
+            <ul><a href="../mediaPlayer/index.html">Media player</a></ul>
+            <ul class="personal"><a href="../watchlist/index.html">Watchlist</a></ul>
+        </nav>
+    </header>
+
+<div id="music-player">
+  <div id="song-title">Song Title</div>
+  <audio id="audio-player" controls></audio>
+  <div class="controls">
+    <button onclick="prevSong()">Previous</button>
+    <button onclick="nextSong()">Next</button>
+  </div>
+</div>
+
+<ul id="playlist">
+    <!-- Playlist items will be dynamically added here -->
+  </ul>
+
+<script>
+const songs = [
+  { title: "Field trip", src: "../../media/fieldTrip.mp3" },
+  { title: "Beauty and the Beast", src: "../../media/beautyAndTheBeast.mp3" },
+  { title: "LV Ghost town", src: "../../media/lvGhostTown.mp3" },
+  { title: "Can u be", src: "../../media/canUBe.mp3" }
+];
+
+let currentSongIndex = 0;
+
+const audioPlayer = document.getElementById("audio-player");
+const songTitle = document.getElementById("song-title");
+const playlist = document.getElementById("playlist");
+
+// Load the playlist
+songs.forEach((song, index) => {
+  const songItem = document.createElement("li");
+  songItem.textContent = song.title;
+  songItem.addEventListener("click", () => loadSong(index));
+  playlist.appendChild(songItem);
+});
+
+// Function to load a song
+function loadSong(index) {
+  audioPlayer.src = songs[index].src;
+  songTitle.textContent = songs[index].title;
+  audioPlayer.play();
+  updatePlaylist();
+}
+
+// Function to update playlist styling
+function updatePlaylist() {
+  const songItems = playlist.getElementsByTagName("li");
+  Array.from(songItems).forEach((item, index) => {
+    item.classList.toggle("active", index === currentSongIndex);
+  });
+}
+
+// Event listeners for end of song and loading the next one
+audioPlayer.addEventListener("ended", nextSong);
+
+// Load initial song
+loadSong(currentSongIndex);
+
+// Function to play the next song
+function nextSong() {
+  currentSongIndex = (currentSongIndex + 1) % songs.length;
+  loadSong(currentSongIndex);
+}
+
+// Function to play the previous song
+function prevSong() {
+  currentSongIndex = (currentSongIndex - 1 + songs.length) % songs.length;
+  loadSong(currentSongIndex);
+}
+</script>
+
+</body>
+</html>
+
